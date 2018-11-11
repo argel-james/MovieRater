@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MovieRater</string>
+    <string name="tv_display">Enter a number greater than 25</string>
+    <string name="tv_password">Enter your password</string>
+    <string name="btn_text">Validate</string>
+    <string name="et_number_hint">Enter number here</string>
+    <string name="et_password_hint">Enter password here</string>
+</resources>
