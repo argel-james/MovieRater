@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">MovieRater</string>
-    <string name="tv_display">Enter a number greater than 25</string>
-    <string name="tv_password">Enter your password</string>
-    <string name="btn_text">Validate</string>
-    <string name="et_number_hint">Enter number here</string>
-    <string name="et_password_hint">Enter password here</string>
+    <string name="text_name">Name</string>
+    <string name="field_name">Enter the title of movie</string>
+    <string name="text_desc">Description</string>
+    <string name="field_desc">Enter a short description of the movie</string>
+    <string name="text_language">Language</string>
+    <string name="rbtn1_text">English</string>
+    <string name="rbtn2_text">Chinese</string>
+    <string name="rbtn3_text">Malay</string>
+    <string name="rbtn4_text">Tamil</string>
+    <string name="text_date">Release date</string>
+    <string name="field_date">Enter release date</string>
+    <string name="checkbox1_text">Not suitable for all audience</string>
+    <string name="checkbox2_text">Violence</string>
+    <string name="checkbox3_text">Language used</string>
+    <string name="btn_add">Add movie</string>
 </resources>

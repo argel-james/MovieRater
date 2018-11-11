@@ -11,31 +11,125 @@
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_display"/>
+            android:text="@string/text_name"/>
 
     <EditText
-            android:id="@+id/etNumBiggerThan25"
-            android:hint="@string/et_number_hint"
+            android:id="@+id/title"
+            android:hint="@string/field_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="number"/>
+            android:layout_height="wrap_content"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/tv_password"/>
+            android:text="@string/text_desc"/>
 
     <EditText
-            android:id="@+id/etPassword"
-            android:hint="@string/et_password_hint"
+            android:id="@+id/desc"
+            android:hint="@string/field_desc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"/>
+            android:layout_height="wrap_content"/>
 
-    <Button
+    <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="btnValidate"
-            android:text="@string/btn_text"/>
+            android:text="@string/text_language"/>
+
+    <RadioGroup
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioResults">
+
+        <RadioButton
+                android:id="@+id/rbtn1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn1_text"/>
+
+        <RadioButton
+                android:id="@+id/rbtn2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn2_text"/>
+
+        <RadioButton
+                android:id="@+id/rbtn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn3_text"/>
+
+        <RadioButton
+                android:id="@+id/rbtn4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rbtn4_text"/>
+    </RadioGroup>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_date"/>
+
+    <EditText
+            android:id="@+id/date"
+            android:hint="@string/field_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.5">
+
+            <CheckBox
+                    android:id="@+id/checkbox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/checkbox1_text"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                <CheckBox
+                        android:id="@+id/checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox2_text"
+                        android:layout_weight="0.5"
+                        android:visibility="gone"/>
+
+                <CheckBox
+                        android:id="@+id/checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/checkbox3_text"
+                        android:layout_weight="0.5"
+                        android:visibility="gone"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="0.5">
+
+            <Button
+                    android:id="@+id/btnIdentify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btnClick"
+                    android:text="@string/btn_add"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>
