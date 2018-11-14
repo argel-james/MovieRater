@@ -15,4 +15,11 @@
     <string name="checkbox2_text">Violence</string>
     <string name="checkbox3_text">Language used</string>
     <string name="btn_add">Add movie</string>
+    <string name="titleDisplay">Title: </string>
+    <string name="overview">Overview</string>
+    <string name="languageDisplay">Language: </string>
+    <string name="dateDisplay">Release date: </string>
+    <string name="suitableDisplay">Suitable for children below 13</string>
+    <string name="share_view">Share your view on the show</string>
+
 </resources>

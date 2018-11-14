@@ -1,7 +1,9 @@
 package a170560u.it2107.nyp.movierater
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_main.*
@@ -68,13 +70,13 @@ class MainActivity : AppCompatActivity() {
 
 
             //Converting languages to string(fromt Int)
-            if(radioStr == 2131165274)
+            if(radioStr == 2131230847)
                 language_buffer = "English"
-            else if(radioStr == 2131165275)
+            else if(radioStr == 2131230848)
                 language_buffer = "Chinese"
-            else if(radioStr == 2131165276)
+            else if(radioStr == 2131230849)
                 language_buffer = "Malay"
-            else if(radioStr == 2131165277)
+            else if(radioStr == 2131230890)
                 language_buffer = "Tamil"
 
             if (titleStr.isEmpty()) {
@@ -101,8 +103,14 @@ class MainActivity : AppCompatActivity() {
                         //return values
                         Toast.makeText(applicationContext, "Title = "+titleStr
                             +"\n" + "Overview ="+descStr + "\n" + "Release date = " +dateStr
-                            +"\n" + "Language = "+language_buffer + "\n" + "Suitable for all ages = " +checkbox_rating_buffer
+                            +"\n" + "Language = "+radioStr + "\n" + "Suitable for all ages = " +checkbox_rating_buffer
                             +"\nReason: \n" +reason_array.joinToString(separator="\n"), Toast.LENGTH_SHORT).show()
+
+
+                        val obj = MovieData(titleStr, descStr, language_buffer, dateStr, checkbox_rating_buffer)
+                        val intent = Intent(this, MovieDisplayDetails::class.java)
+                        intent.putExtra("key", obj)
+                        startActivity(intent)
                     }
                 }
 
@@ -111,6 +119,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
+            }
+
+
+
+
+
+
         }
     }
-}
