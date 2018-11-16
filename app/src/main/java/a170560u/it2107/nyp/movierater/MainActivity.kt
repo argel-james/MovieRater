@@ -29,6 +29,39 @@ class MainActivity : AppCompatActivity() {
         var checkbox_rating_buffer: String = "false"
         val reason_array = arrayListOf<String>()
 
+
+        checkBoxFirst?.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                checkBoxSecond.setVisibility(View.VISIBLE)
+                checkBoxThird.setVisibility(View.VISIBLE)
+                checkbox_rating_buffer = "true"
+
+                checkBoxSecond?.setOnCheckedChangeListener { buttonView2, isChecked2 ->
+                    if(isChecked2) {
+                        reason_array.add("Violence")
+                    }
+                    else {
+                        reason_array.remove("Violence")
+                    }
+
+                }
+
+                checkBoxThird?.setOnCheckedChangeListener { buttonView3, isChecked3 ->
+                    if(isChecked3) {
+                        reason_array.add("Language")
+                    }
+                    else {
+                        reason_array.remove("Language")
+                    }
+
+                }
+            } else {
+                checkBoxSecond.setVisibility(View.INVISIBLE)
+                checkBoxThird.setVisibility(View.INVISIBLE)
+                checkbox_rating_buffer = "false"
+            }
+        }
+
         btnClicked.setOnClickListener {
             val titleStr: String = titleValid.text.toString()
             val descStr: String = descValid.text.toString()
@@ -36,37 +69,7 @@ class MainActivity : AppCompatActivity() {
             val radioStr: Int = radioAnswer.checkedRadioButtonId
 
 
-            checkBoxFirst?.setOnCheckedChangeListener { buttonView, isChecked ->
-                if (isChecked) {
-                    checkBoxSecond.setVisibility(View.VISIBLE)
-                    checkBoxThird.setVisibility(View.VISIBLE)
-                    checkbox_rating_buffer = "true"
 
-                    checkBoxSecond?.setOnCheckedChangeListener { buttonView2, isChecked2 ->
-                        if(isChecked2) {
-                            reason_array.add("Violence")
-                        }
-                        else {
-                            reason_array.remove("Violence")
-                        }
-
-                    }
-
-                    checkBoxThird?.setOnCheckedChangeListener { buttonView3, isChecked3 ->
-                        if(isChecked3) {
-                            reason_array.add("Language")
-                        }
-                        else {
-                            reason_array.remove("Language")
-                        }
-
-                    }
-                } else {
-                    checkBoxSecond.setVisibility(View.INVISIBLE)
-                    checkBoxThird.setVisibility(View.INVISIBLE)
-                    checkbox_rating_buffer = "false"
-                }
-            }
 
 
             //Converting languages to string(fromt Int)
