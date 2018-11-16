@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
             if (isChecked) {
                 checkBoxSecond.setVisibility(View.VISIBLE)
                 checkBoxThird.setVisibility(View.VISIBLE)
-                checkbox_rating_buffer = "true"
+                checkbox_rating_buffer = "false"
 
                 checkBoxSecond?.setOnCheckedChangeListener { buttonView2, isChecked2 ->
                     if(isChecked2) {
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
             } else {
                 checkBoxSecond.setVisibility(View.INVISIBLE)
                 checkBoxThird.setVisibility(View.INVISIBLE)
-                checkbox_rating_buffer = "false"
+                checkbox_rating_buffer = "true"
             }
         }
 
@@ -73,13 +73,13 @@ class MainActivity : AppCompatActivity() {
 
 
             //Converting languages to string(fromt Int)
-            if(radioStr == 2131230847)
+            if(radioStr == 2131230848)
                 language_buffer = "English"
-            else if(radioStr == 2131230848)
-                language_buffer = "Chinese"
             else if(radioStr == 2131230849)
+                language_buffer = "Chinese"
+            else if(radioStr == 2131230850)
                 language_buffer = "Malay"
-            else if(radioStr == 2131230890)
+            else if(radioStr == 2131230851)
                 language_buffer = "Tamil"
 
             if (titleStr.isEmpty()) {
@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                         //return values
                         Toast.makeText(applicationContext, "Title = "+titleStr
                             +"\n" + "Overview ="+descStr + "\n" + "Release date = " +dateStr
-                            +"\n" + "Language = "+radioStr + "\n" + "Suitable for all ages = " +checkbox_rating_buffer
+                            +"\n" + "Language = "+language_buffer + "\n" + "Suitable for all ages = " +checkbox_rating_buffer
                             +"\nReason: \n" +reason_array.joinToString(separator="\n"), Toast.LENGTH_SHORT).show()
 
 
